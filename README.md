@@ -11,3 +11,8 @@
 * [Virtualenv](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) - Using Virtualenvwrapper.
 * Starting out with Requests, BeautifulSoup4 and saving in MongoDb.
 * Install package - `pip install Scrapy beautifulsoup4 requests pymongo`
+* For *yaml* packages
+  * [Yaml](http://yaml.readthedocs.io/en/latest/install.html)
+## Setup
+* Config settings
+    * Use *ruamel.yaml* for reading YAML file.
