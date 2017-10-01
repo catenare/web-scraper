@@ -13,6 +13,6 @@ def get_site_url(site_data):
     return site_data[SITE_SETTINGS][SITE_URL]
 
 if __name__ == "__main__":
-    site_config = 'app/settings/site.yaml'
+    site_config = 'site.yaml'
     site_data = set_settings(site_config)
     print(get_site_url(site_data))
