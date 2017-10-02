@@ -2,11 +2,13 @@
 * Download information from web pages and store in a database.
 ## Using..
 * Framework
-  * [Scrapy](https://docs.scrapy.org/en/latest/index.html) - Framework for scraping a website
+    * [Scrapy](https://docs.scrapy.org/en/latest/index.html) - Framework for scraping a website
     * pip install --user Scrapy ()
 * Libraries
-  * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
-  * [Requests](http://docs.python-requests.org/en/master/)
+    * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+    * [Requests](http://docs.python-requests.org/en/master/)
+* Database
+    * [Mongod](https://www.mongodb.com/) - using mongo for data storage.
 ## Environment
 * [Virtualenv](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) - Using Virtualenvwrapper.
 * Starting out with Requests, BeautifulSoup4 and saving in MongoDb.
