@@ -26,5 +26,4 @@ Retrieve the main page from the database.
 Get all the information from the a tag for each company
 Create new collection/table with just the company information
 href link as the id to find the individual company in the collection of company information.
-
 '''

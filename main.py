@@ -1,9 +1,11 @@
-import app.get_pages as get_pages
+import click
+import app
 
 
+@click.command()
 def main():
-    print(get_pages.CONFIG)
-    print(get_pages.site_url)
+    click.echo(app.get_pages.CONFIG)
+    click.echo(app.get_pages.site_url)
 
 
 if __name__ == '__main__':
