@@ -1,2 +1,3 @@
 settings:
   url: https://www.offerzen.com/companies/public_list
+  base_url: https://www.offerzen.com
