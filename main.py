@@ -2,10 +2,10 @@ import click
 import app
 
 
-@click.command()
 def main():
-    click.echo(app.get_pages.CONFIG)
-    click.echo(app.get_pages.site_url)
+    print(app.get_pages.company_base_url)
+    print(app.get_pages.site_url)
+    app.get_pages.retrieve_pages()
 
 
 if __name__ == '__main__':

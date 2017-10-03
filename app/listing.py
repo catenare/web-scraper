@@ -1,6 +1,7 @@
 from . import get_pages
 from . import database as db
 
+
 def retrieve_main_page():
     pass
 

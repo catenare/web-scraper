@@ -10,11 +10,13 @@ db = database.db
 
 CONFIG = app_config.CONFIG_DATA
 site_url = app_config.get_site_url(app_config.set_settings(CONFIG))
-company_base_url = app_config.BASE_URL
+company_base_url = app_config.get_base_url(app_config.set_settings(CONFIG))
 
 
 def get_page(url):
-    return requests.get(url)
+    session = requests.Session()
+    headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit 537.36(KHTML, like Gecko) Chrome", "Accept": "text/html,application/xhtml+xml,application/xml; q = 0.9, image / webp, * / *;q = 0.8"}
+    return requests.get(url, headers=headers)
 
 
 # parse the page with beautfile soup
@@ -26,7 +28,7 @@ def get_page_parsed(res):
 def save_page_data(page_name, page_data):
     key_name = page_name.replace(".", "@")
     data = page_data.text
-    page = {key_name: data}
+    page = {'key': key_name, 'page': data}
     return db.pages.insert_one(page)
 
 
@@ -46,6 +48,7 @@ def get_company_data(url_list):
         print(result.inserted_id)
         count = count + 1
         time.sleep(1)
+        print(count)
     return count
 
 
