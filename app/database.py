@@ -32,3 +32,28 @@ def save_company_data(name, data):
         'detail': data
     }
     return db.company.insert_one(company)
+
+
+def update_company_data(company_id, data):
+    pass
+
+
+def retrieve_company_by_href(search_text):
+    company = db.companies.find_one({'$text': {'$search': search_text}})
+    return company
+
+
+#companies
+# _id
+# company
+# elevator-pitch
+# details
+# data-id
+# data-search
+# data-cities
+# tech-stack
+# href
+#pages
+# _id
+# key
+# page
