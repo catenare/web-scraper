@@ -13,6 +13,11 @@ def save_page_data(page_name, page_data):
     return db.pages.insert_one(page)
 
 
+def find_company_page(company):
+    document = db.pages.find_one({"key": company})
+    return document
+
+
 # Find page via key with search text
 def find_page(search_text):
     document = db.pages.find_one({'$text': {'$search': search_text}}, {"key": 1})
@@ -34,26 +39,17 @@ def save_company_data(name, data):
     return db.company.insert_one(company)
 
 
-def update_company_data(company_id, data):
-    pass
+def find_company_by_id(company_id):
+    return db.companies.find_one({"_id": ObjectId(company_id)})
 
 
-def retrieve_company_by_href(search_text):
-    company = db.companies.find_one({'$text': {'$search': search_text}})
-    return company
+def find_companies_by_missing_field(field):
+    return db.companies.find({field: {'$exists': False}})
 
 
-#companies
-# _id
-# company
-# elevator-pitch
-# details
-# data-id
-# data-search
-# data-cities
-# tech-stack
-# href
-#pages
-# _id
-# key
-# page
+def find_all_companies():
+    return db.companies.find()
+
+
+def update_company_data(company):
+    return db.companies.replace_one({'_id': ObjectId(company['_id'])}, company)

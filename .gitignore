@@ -1,3 +1,4 @@
 *pycache*
 .idea/
 primer-dataset.json
+logs/*.txt

@@ -21,7 +21,8 @@ class Home(company.Page):
                 'data-search': link['data-search'],
                 'data-cities': link['data-cities'],
                 'tech-stack': link['data-tech-services'],
-                'href': link['href']
+                'href': link['href'],
+                'anchor': self.get_anchor(link['href'])
             }
             url_list.append(link_info)
         return url_list
@@ -40,6 +41,11 @@ class Home(company.Page):
             if '' != option['value']:
                 link.append({'value': option['value'], 'text': option.text})
         return link
+
+    def get_anchor(self, href):
+        record = db.find_company_page(href)
+        comp = company.Company(record)
+        return comp.get_anchor()
 
     def save_info(self):
         cities = self.get_city_links()

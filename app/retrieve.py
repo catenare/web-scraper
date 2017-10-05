@@ -13,9 +13,14 @@ company_base_url = app_config.get_base_url(app_config.set_settings(CONFIG))
 
 
 def get_page(url):
+    result = None
     session = requests.Session()
     headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit 537.36(KHTML, like Gecko) Chrome", "Accept": "text/html,application/xhtml+xml,application/xml; q = 0.9, image / webp, * / *;q = 0.8"}
-    return requests.get(url, headers=headers)
+    try:
+        result = requests.get(url, headers=headers)
+    except requests.exceptions.RequestException:
+        print('Error Url: {}'.format(url))
+    return result
 
 
 # parse the page with beautfile soup
