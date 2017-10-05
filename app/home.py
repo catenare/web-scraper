@@ -5,6 +5,7 @@ from . import company
 HOME_PAGE_SEARCH_TEXT = "offerzen"
 CITY = 'city'
 TECH = 'tech-services'
+KEY_INDEX = "key"
 
 
 class Home(company.Page):
@@ -21,10 +22,16 @@ class Home(company.Page):
                 'data-search': link['data-search'],
                 'data-cities': link['data-cities'],
                 'tech-stack': link['data-tech-services'],
-                'href': link['href'],
-                'anchor': self.get_anchor(link['href'])
+                'href': link['href']
+                # 'anchor': self.get_anchor(link['href'])
             }
-            url_list.append(link_info)
+            try:
+                anchor = self.get_anchor(link['href'])
+            except IndexError as err:
+                print("error finding href: {} {}".format( link_info['company'], err))
+            else:
+                link_info['anchor'] = anchor
+                url_list.append(link_info)
         return url_list
 
     def get_city_links(self):
@@ -81,12 +88,9 @@ def get_details(anchor):
 
 
 def main():
+    index_result = db.create_index_on_pages(KEY_INDEX)
+    print('index result: {}'.format(index_result))
     page = db.find_page(HOME_PAGE_SEARCH_TEXT)
-    main_page = Home(page['_id'], page['key'])
+    main_page = Home(page)
     result = main_page.save_info()
     return result
-
-
-main_result = main()
-print(main_result)
-

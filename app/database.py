@@ -1,3 +1,4 @@
+import pymongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
@@ -11,6 +12,10 @@ def save_page_data(page_name, page_data):
     data = page_data.text
     page = {'key': key_name, 'page': data}
     return db.pages.insert_one(page)
+
+
+def create_index_on_pages(field):
+    return db.pages.create_index([(field, pymongo.TEXT)])
 
 
 def find_company_page(company):

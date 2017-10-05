@@ -16,10 +16,7 @@ def get_page(url):
     result = None
     session = requests.Session()
     headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit 537.36(KHTML, like Gecko) Chrome", "Accept": "text/html,application/xhtml+xml,application/xml; q = 0.9, image / webp, * / *;q = 0.8"}
-    try:
-        result = requests.get(url, headers=headers)
-    except requests.exceptions.RequestException:
-        print('Error Url: {}'.format(url))
+    result = requests.get(url.strip(), headers=headers)
     return result
 
 
@@ -66,7 +63,7 @@ def retrieve_pages():
 
 
 def main():
-    pass
+    print("Welcome to the main retrieve section")
 
 
 if __name__ == '__main__':

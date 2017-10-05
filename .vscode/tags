@@ -4,4 +4,104 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-main.py	../src/main.py	1;"	kind:file	line:1
+BASE_URL	../app/config.py	/^BASE_URL = 'base_url'$/;"	kind:variable	line:6
+CITY	../app/home.py	/^CITY = 'city'$/;"	kind:variable	line:6
+CONFIG	../app/retrieve.py	/^CONFIG = app_config.CONFIG_DATA$/;"	kind:variable	line:10
+CONFIG_DATA	../app/config.py	/^CONFIG_DATA = 'site.yaml'$/;"	kind:variable	line:7
+Company	../app/company.py	/^class Company:$/;"	kind:class	line:42
+ERROR_FILE	../app/company.py	/^ERROR_FILE = 'logs\/error'$/;"	kind:variable	line:11
+HOME_PAGE_SEARCH_TEXT	../app/home.py	/^HOME_PAGE_SEARCH_TEXT = "offerzen"$/;"	kind:variable	line:5
+Home	../app/home.py	/^class Home(company.Page):$/;"	kind:class	line:11
+KEY	../app/company.py	/^KEY = 'key'$/;"	kind:variable	line:10
+KEY_INDEX	../app/home.py	/^KEY_INDEX = "key"$/;"	kind:variable	line:8
+MongoClient	../app/database.py	/^from pymongo import MongoClient$/;"	kind:namespace	line:2
+ObjectId	../app/database.py	/^from bson.objectid import ObjectId$/;"	kind:namespace	line:3
+PAGE	../app/company.py	/^PAGE = 'page'$/;"	kind:variable	line:9
+Page	../app/company.py	/^class Page:$/;"	kind:class	line:14
+Path	../app/config.py	/^from pathlib import Path$/;"	kind:namespace	line:1
+SITE_SETTINGS	../app/config.py	/^SITE_SETTINGS = 'settings'$/;"	kind:variable	line:4
+SITE_URL	../app/config.py	/^SITE_URL = 'url'$/;"	kind:variable	line:5
+TECH	../app/home.py	/^TECH = 'tech-services'$/;"	kind:variable	line:7
+YAML	../app/config.py	/^from ruamel.yaml import YAML$/;"	kind:namespace	line:2
+__init__	../app/company.py	/^    def __init__(self, page_id, key):$/;"	kind:member	line:17
+__init__	../app/company.py	/^    def __init__(self, record):$/;"	kind:member	line:43
+__init__.py	../app/__init__.py	1;"	kind:file	line:1
+app	../main.py	/^import app$/;"	kind:namespace	line:2
+app_config	../app/retrieve.py	/^from . import config as app_config$/;"	kind:namespace	line:6
+bs4	../app/company.py	/^import bs4$/;"	kind:namespace	line:1
+bs4	../app/retrieve.py	/^import bs4$/;"	kind:namespace	line:2
+cli	../main.py	/^cli = click.CommandCollection(sources=[retrieve])$/;"	kind:variable	line:26
+click	../main.py	/^import click$/;"	kind:namespace	line:1
+client	../app/database.py	/^client = MongoClient()$/;"	kind:variable	line:5
+company	../app/__init__.py	/^from . import company$/;"	kind:namespace	line:2
+company	../app/home.py	/^from . import company$/;"	kind:namespace	line:2
+company.py	../app/company.py	1;"	kind:file	line:1
+company_base_url	../app/retrieve.py	/^company_base_url = app_config.get_base_url(app_config.set_settings(CONFIG))$/;"	kind:variable	line:12
+config.py	../app/config.py	1;"	kind:file	line:1
+create_index_on_pages	../app/database.py	/^def create_index_on_pages(field):$/;"	kind:function	line:17
+database	../app/__init__.py	/^from . import database$/;"	kind:namespace	line:3
+database.py	../app/database.py	1;"	kind:file	line:1
+datetime	../app/company.py	/^from datetime import datetime$/;"	kind:namespace	line:4
+db	../app/company.py	/^from . import database as db$/;"	kind:namespace	line:5
+db	../app/database.py	/^db = client.jobsearch$/;"	kind:variable	line:6
+db	../app/home.py	/^from . import database as db$/;"	kind:namespace	line:1
+db	../app/retrieve.py	/^from . import database as db$/;"	kind:namespace	line:7
+download_company_list	../main.py	/^def download_company_list():$/;"	kind:function	line:11
+find_all_companies	../app/database.py	/^def find_all_companies():$/;"	kind:function	line:55
+find_companies_by_missing_field	../app/database.py	/^def find_companies_by_missing_field(field):$/;"	kind:function	line:51
+find_company_by_id	../app/database.py	/^def find_company_by_id(company_id):$/;"	kind:function	line:47
+find_company_page	../app/database.py	/^def find_company_page(company):$/;"	kind:function	line:21
+find_page	../app/database.py	/^def find_page(search_text):$/;"	kind:function	line:27
+get_anchor	../app/company.py	/^    def get_anchor(self):$/;"	kind:member	line:58
+get_anchor	../app/home.py	/^    def get_anchor(self, href):$/;"	kind:member	line:46
+get_base_url	../app/config.py	/^def get_base_url(site_data):$/;"	kind:function	line:20
+get_city_links	../app/home.py	/^    def get_city_links(self):$/;"	kind:member	line:31
+get_companies_home_pages	../main.py	/^def get_companies_home_pages():$/;"	kind:function	line:21
+get_company	../app/home.py	/^def get_company(anchor):$/;"	kind:function	line:72
+get_company_data	../app/retrieve.py	/^def get_company_data(url_list):$/;"	kind:function	line:35
+get_company_home_pages	../app/company.py	/^def get_company_home_pages(query):$/;"	kind:function	line:64
+get_details	../app/home.py	/^def get_details(anchor):$/;"	kind:function	line:80
+get_elevator_pitch	../app/home.py	/^def get_elevator_pitch(anchor):$/;"	kind:function	line:76
+get_id	../app/company.py	/^    def get_id(self):$/;"	kind:member	line:27
+get_key	../app/company.py	/^    def get_key(self):$/;"	kind:member	line:24
+get_key	../app/company.py	/^    def get_key(self):$/;"	kind:member	line:50
+get_main_page	../app/retrieve.py	/^def get_main_page():$/;"	kind:function	line:48
+get_main_page_links	../app/home.py	/^    def get_main_page_links(self):$/;"	kind:member	line:13
+get_main_page_links	../app/retrieve.py	/^def get_main_page_links(page):$/;"	kind:function	line:28
+get_option_list	../app/home.py	/^    def get_option_list(self, css_id):$/;"	kind:member	line:37
+get_page	../app/company.py	/^    def get_page(self):$/;"	kind:member	line:30
+get_page	../app/company.py	/^    def get_page(self):$/;"	kind:member	line:47
+get_page	../app/retrieve.py	/^def get_page(url):$/;"	kind:function	line:15
+get_page_parsed	../app/retrieve.py	/^def get_page_parsed(res):$/;"	kind:function	line:24
+get_parsed_page	../app/company.py	/^    def get_parsed_page(self):$/;"	kind:member	line:36
+get_parsed_page	../app/company.py	/^    def get_parsed_page(self):$/;"	kind:member	line:53
+get_site_url	../app/config.py	/^def get_site_url(site_data):$/;"	kind:function	line:16
+get_stack_links	../app/home.py	/^    def get_stack_links(self):$/;"	kind:member	line:34
+home	../app/__init__.py	/^from . import home$/;"	kind:namespace	line:4
+home.py	../app/home.py	1;"	kind:file	line:1
+list_companies	../app/company.py	/^def list_companies(query):$/;"	kind:function	line:83
+lxml	../app/company.py	/^import lxml$/;"	kind:namespace	line:2
+lxml	../app/retrieve.py	/^import lxml$/;"	kind:namespace	line:3
+main	../app/home.py	/^def main():$/;"	kind:function	line:84
+main	../app/retrieve.py	/^def main():$/;"	kind:function	line:65
+main.py	../main.py	1;"	kind:file	line:1
+parse_page	../app/company.py	/^def parse_page(page):$/;"	kind:function	line:89
+process_company_list	../main.py	/^def process_company_list():$/;"	kind:function	line:16
+pymongo	../app/database.py	/^import pymongo$/;"	kind:namespace	line:1
+random	../app/retrieve.py	/^import random$/;"	kind:namespace	line:4
+requests	../app/company.py	/^import requests$/;"	kind:namespace	line:3
+requests	../app/retrieve.py	/^import requests$/;"	kind:namespace	line:1
+retrieve	../app/__init__.py	/^from . import retrieve$/;"	kind:namespace	line:1
+retrieve	../app/__init__.py	/^from . import retrieve$/;"	kind:namespace	line:5
+retrieve	../app/company.py	/^from . import retrieve$/;"	kind:namespace	line:6
+retrieve	../main.py	/^def retrieve():$/;"	kind:function	line:6
+retrieve.py	../app/retrieve.py	1;"	kind:file	line:1
+retrieve_page	../app/database.py	/^def retrieve_page(page_id):$/;"	kind:function	line:33
+retrieve_pages	../app/retrieve.py	/^def retrieve_pages():$/;"	kind:function	line:56
+save_company_data	../app/database.py	/^def save_company_data(name, data):$/;"	kind:function	line:39
+save_info	../app/home.py	/^    def save_info(self):$/;"	kind:member	line:51
+save_page_data	../app/database.py	/^def save_page_data(page_name, page_data):$/;"	kind:function	line:10
+set_settings	../app/config.py	/^def set_settings(config):$/;"	kind:function	line:10
+site_url	../app/retrieve.py	/^site_url = app_config.get_site_url(app_config.set_settings(CONFIG))$/;"	kind:variable	line:11
+time	../app/retrieve.py	/^import time$/;"	kind:namespace	line:5
+update_company_data	../app/database.py	/^def update_company_data(company):$/;"	kind:function	line:59
