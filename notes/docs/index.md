@@ -1,17 +1,18 @@
-# Welcome to MkDocs
+# Scraping a web site
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+## Scraping offerzen
+* http://www.offerzen.com
+* Get list of companies from OfferZen
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Field List
+* _id
+* company
+* elevator-pitch
+* details
+* data-id
+* data-search
+* data-cities
+* tech-stack
+* href
+* anchor
+* home_page
