@@ -34,7 +34,7 @@ PyYAML==3.12
 queuelib==1.4.2
 requests==2.18.4
 ruamel.yaml==0.15.34
-Scrapy==1.4.0
+Scrapy==2.6.1
 service-identity==17.0.0
 six==1.11.0
 tornado==4.5.2
